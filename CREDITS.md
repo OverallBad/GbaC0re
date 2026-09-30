@@ -4,7 +4,7 @@
 
 - **OverallBad** — GbaC0re developer. Ported the emulator to the PS5 LuaC0re
   payload runtime, wrote the GBA glue layer, menu system, ROM uploader,
-  save-state support, and the PC↔PS5 link-cable bridge.
+  save-state support, and the GBA link-cable bridge.
 
 ## Stepping stones
 
@@ -35,7 +35,7 @@ Without these projects, GbaC0re would not exist.
   https://mgba.io — `mCore` GBA emulation, HLE BIOS.
   (Not shipped; fetched at build time.)
 
-## Runtime (adapted for this port — GPL-2.0-or-later)
+## Runtime (adapted for this port — MPL-2.0/GPL-2.0-or-later)
 
 - **LuaPSX** — soniciso1 (GPL-2.0-or-later). `LICENSE` carries the license text.
 
@@ -43,12 +43,12 @@ Without these projects, GbaC0re would not exist.
 
 - GBA glue (`ps5/src/gba_glue.*`), menu system, ROM picker, web-based ROM
   uploader, save states, link-cable bridge (`ps5/link/`) — written by
-  OverallBad for this project, same GPL-2.0-or-later terms as the runtime.
+  OverallBad for this project, same MPL-2.0/GPL-2.0-or-later terms as the runtime.
 
 ## License summary
 
 | Component | License |
 |---|---|
-| LuaPSX-derived runtime files | GPL-2.0-or-later (`LICENSE`) |
-| GbaC0re glue/docs/launcher/link bridge | GPL-2.0-or-later |
+| LuaPSX-derived GbaC0re runtime files | MPL-2.0/GPL-2.0-or-later (`LICENSE`) |
+| GbaC0re glue/docs/launcher/link bridge | MPL-2.0/GPL-2.0-or-later |
 | mGBA | MPL-2.0 (its own license, in its source tree) |
