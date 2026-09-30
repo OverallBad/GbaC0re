@@ -1,3 +1,7 @@
+# mGBA source (fetched at build time, not shipped)
+ps5/mgba/
+mgba/
+
 # Build artifacts
 *.o
 *.a
@@ -37,7 +41,11 @@ Thumbs.db
 *.ss0
 saves/
 states/
-roms/
+# Allow the empty ps5/roms/ folder (with README) but ignore its contents
+roms/*
+!ps5/roms/
+ps5/roms/*
+!ps5/roms/README.txt
 
 # Logs
 *.log
