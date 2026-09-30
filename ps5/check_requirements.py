@@ -27,7 +27,7 @@ REQUIRED_TOOLS = ["gcc", "objcopy", "readelf", "objdump", "ar"]
 MGBA_SRC = os.environ.get("MGBA_SRC", os.path.join(ROOT, "mgba"))
 MGBA_MARKERS = [
     os.path.join("include", "mgba", "core", "core.h"),
-    os.path.join("src", "gba", "gba.h"),
+    os.path.join("include", "mgba", "internal", "gba", "gba.h"),
 ]
 
 # Link-cable bridge sources (shipped in link/)
