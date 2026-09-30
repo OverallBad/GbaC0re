@@ -163,9 +163,9 @@ src/util/vfs/vfs-file.c
 SRC_SRCS = ["src/main.c", "src/gba_glue.c", "src/gba_runtime.c",
             "src/shim.c", "src/ui.c", "src/menu.c", "src/savedata.c", "src/mgba_stubs.c",
             "src/savestate.c",
-            os.path.join("..", "..", "link", "link_proto.c"),
-            os.path.join("..", "..", "link", "link_ps5.c"),
-            os.path.join("..", "..", "link", "bridge.c")]
+            os.path.join(LINK_DIR, "link_proto.c"),
+            os.path.join(LINK_DIR, "link_ps5.c"),
+            os.path.join(LINK_DIR, "bridge.c")]
 
 HEADERS = ["src/core.h", "src/shim.h", "src/gba_glue.h",
            "src/ui.h", "src/menu.h", "src/tables.h", "src/savedata.h"]
