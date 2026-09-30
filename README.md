@@ -1,6 +1,10 @@
 # GbaC0re — Game Boy Advance Emulator for PS5
 
+[![ko-fi](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/overallbad)
+
 Game Boy Advance emulation on a PlayStation 5, delivered through the LuaC0re loader. Built on the mGBA emulation core.
+
+> If GbaC0re is useful to you, [consider buying me a coffee](https://ko-fi.com/overallbad) — any donations help keep the project going, but they're never necessary. Enjoy!
 
 ## Requirements
 
