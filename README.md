@@ -21,8 +21,33 @@ Game Boy Advance emulation on a PlayStation 5, delivered through the LuaC0re loa
 
 ### 2. Build the payload (on your PC)
 
+First, verify your build environment:
+
 ```bash
 cd ps5
+python3 check_requirements.py
+```
+
+This checks for `gcc`, `objcopy`, `readelf`, `objdump`, `ar`, all payload
+sources, and the mGBA source tree. If anything is missing, it tells you
+exactly what to install.
+
+The mGBA source tree is **not shipped** with GbaC0re (MPL-2.0 license).
+Fetch it once — the checker can do it for you:
+
+```bash
+python3 check_requirements.py --fix
+```
+
+Or manually:
+
+```bash
+git clone --depth 1 https://github.com/mgba-emu/mgba.git mgba
+```
+
+Then build:
+
+```bash
 python3 build.py
 ```
 

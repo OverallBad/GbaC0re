@@ -34,7 +34,11 @@ MGBA_SRC = os.environ.get("MGBA_SRC", os.path.join(ROOT, "mgba"))
 TARGET = "gba_emu"
 
 # Link-cable bridge sources (shared with the PC port).
-LINK_DIR = os.path.join(ROOT, "..", "..", "link")
+# Prefer the local link/ directory (beta layout); fall back to the
+# original workspace-relative path for dev checkouts.
+LINK_DIR = os.path.join(ROOT, "link")
+if not os.path.isdir(LINK_DIR):
+    LINK_DIR = os.path.join(ROOT, "..", "..", "link")
 
 BASEFLAGS = ["-Os", "-ffreestanding", "-fno-stack-protector", "-fno-builtin",
              "-fpie", "-mno-red-zone", "-fomit-frame-pointer",
@@ -344,6 +348,15 @@ def do_clean(dist=False):
 
 def main(argv):
     cmd = argv[1] if len(argv) > 1 else "build"
+    if cmd in ("build", "check"):
+        # Verify prerequisites before compiling -- fails early with a
+        # clear message instead of a cryptic error halfway through.
+        chk = os.path.join(ROOT, "check_requirements.py")
+        if os.path.isfile(chk):
+            rc = subprocess.run([sys.executable, chk]).returncode
+            if rc != 0:
+                sys.exit(f"\nPrerequisites check failed (exit {rc}). "
+                         f"Fix the above, then re-run build.py.")
     if cmd == "build":
         do_build()
     elif cmd == "check":
