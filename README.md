@@ -7,6 +7,10 @@ Game Boy Advance emulation on a PlayStation 5, delivered through the LuaC0re loa
 
 > If GbaC0re is useful to you, [consider buying me a coffee](https://ko-fi.com/overallbad) — any donations help keep the project going, but they're never necessary. Enjoy!
 
+
+Download the beta release [here](https://github.com/OverallBad/GbaC0re/releases/tag/v1.0.0-beta)
+
+
 ## Requirements
 
 - **PS5** on firmware **14.00 or lower**
