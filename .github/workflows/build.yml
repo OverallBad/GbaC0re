@@ -1,0 +1,31 @@
+name: Build Payload
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Install build tools
+        run: sudo apt-get update && sudo apt-get install -y build-essential binutils python3 git
+
+      - name: Check prerequisites
+        run: |
+          cd ps5
+          python3 check_requirements.py --fix
+
+      - name: Build payload
+        run: |
+          cd ps5
+          python3 build.py check
+
+      - name: Verify artifacts
+        run: |
+          ls -lh ps5/gba_emu.bin ps5/lua/gba.lua
