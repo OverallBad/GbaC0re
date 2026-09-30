@@ -6,9 +6,7 @@ Game Boy Advance emulation for PS5 and PC, built on the mGBA core.
 
 | Directory | Description |
 |-----------|-------------|
-| `ps5/` | PS5 payload for the LuaC0re loader (primary) |
-| `pc/` | Native PC port (SDL2, Windows/Linux) |
-| `ps5-native/` | Native PS5 homebrew (Prospero SDK, experimental) |
+| `ps5/` | PS5 payload for the LuaC0re loader |
 | `docs/` | Technical documentation |
 
 ## PS5 (LuaC0re Payload)
@@ -26,18 +24,6 @@ The primary PS5 build. Runs through the LuaC0re exploit loader on a jailbroken P
 **Quick start:**
 1. See `ps5/README.md` for full setup instructions
 2. Upload ROMs: `python gba_launcher.py <PS5_IP> --roms /path/to/roms`
-
-## PC Port
-
-Native SDL2 application for Windows and Linux. Same mGBA core, same UI.
-
-See `pc/README.md` for build instructions.
-
-## Native PS5 Homebrew
-
-Experimental native port using the Prospero SDK. Requires etaHEN homebrew launcher.
-
-See `ps5-native/INSTALL.md`. **Not tested on hardware.**
 
 ## Link-Cable Bridge
 
