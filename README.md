@@ -194,11 +194,11 @@ GBA link-cable transfers are tunneled over UDP between the two systems:
 The following are planned but not in this beta:
 
 - **Cheat code support** (deferred)
-- **Rewind / fast-save slots** (single save-state slot only)
+- **Rewind** (not planned)
+- **Frame-by-frame advance** (not planned)
 - **Screen filters** (no smoothing/scanlines yet)
 - **Button remapping** (fixed layout)
 - **Recent-ROM list / auto-resume** (ROMs must be re-uploaded after reboot)
-- **Turbo / frame advance**
 
 ## Troubleshooting
 
