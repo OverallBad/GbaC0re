@@ -27,7 +27,9 @@ REQUIRED_TOOLS = ["gcc", "objcopy", "readelf", "objdump", "ar"]
 MGBA_SRC = os.environ.get("MGBA_SRC", os.path.join(ROOT, "mgba"))
 MGBA_MARKERS = [
     os.path.join("include", "mgba", "core", "core.h"),
+    # gba.h moved upstream: old layout src/gba/gba.h, new layout include/mgba/internal/gba/gba.h
     os.path.join("src", "gba", "gba.h"),
+    os.path.join("include", "mgba", "internal", "gba", "gba.h"),
 ]
 
 # Link-cable bridge sources (shipped in link/)
@@ -61,10 +63,11 @@ def check_tools():
 
 def check_mgba():
     """Return True if the mGBA source tree looks valid."""
-    for marker in MGBA_MARKERS:
-        if not os.path.isfile(os.path.join(MGBA_SRC, marker)):
-            return False
-    return True
+    # core.h must exist; gba.h may be at the old or new upstream path
+    core = os.path.join(MGBA_SRC, "include", "mgba", "core", "core.h")
+    gba_old = os.path.join(MGBA_SRC, "src", "gba", "gba.h")
+    gba_new = os.path.join(MGBA_SRC, "include", "mgba", "internal", "gba", "gba.h")
+    return os.path.isfile(core) and (os.path.isfile(gba_old) or os.path.isfile(gba_new))
 
 
 def check_link():
