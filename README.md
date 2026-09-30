@@ -164,7 +164,7 @@ while the payload is running.
 ## Link-Cable Multiplayer 🚧 WIP
 
 > **Work in progress.** The link-cable bridge is implemented but has not yet
-> been verified working between PS5 and PC. Expect issues.
+> been verified working between PS5s. Expect issues (or plain just not working).
 
 ### How it's supposed to work
 
