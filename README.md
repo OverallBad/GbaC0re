@@ -76,7 +76,8 @@ python3 gba_launcher.py 192.168.0.152 --roms /path/to/your/roms --log
 ```
 
 No `pip install` needed — the launcher uses only the Python standard library.
-Just Python 3 and the built payload.
+Just Python 3 and the built payload. (On some systems, particularly Windows,
+the command is `python` instead of `python3` — use whichever works.)
 
 What each flag does:
 - `--roms /path/to/your/roms` — uploads every `.gba` file in that folder
