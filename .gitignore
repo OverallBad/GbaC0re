@@ -1,0 +1,45 @@
+# Build artifacts
+*.o
+*.a
+*.so
+*.elf
+*.bin
+*.exe
+*.dll
+__pycache__/
+*.pyc
+*.pyo
+
+# Build directories
+build/
+dist/
+*.zip
+
+# Editor files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# ROMs, saves, and states (never commit - copyrighted/personal)
+*.gba
+*.gb
+*.gbc
+*.sav
+*.ss0
+saves/
+states/
+roms/
+
+# Logs
+*.log
+ps5log.txt
+
+# Local config
+*.local
+.env
