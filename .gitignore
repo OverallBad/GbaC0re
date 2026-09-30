@@ -10,6 +10,9 @@ __pycache__/
 *.pyc
 *.pyo
 
+# Generated Lua loader (built from lua/gba.lua.in by build.py)
+ps5/lua/gba.lua
+
 # Build directories
 build/
 dist/
